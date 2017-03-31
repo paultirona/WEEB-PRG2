@@ -1,5 +1,4 @@
-<?php
-?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head> 
@@ -21,6 +20,7 @@
 		<title>Sign Up</title>
 	</head>
 	<body>
+	
 		<div class="container">
 	
 			<div class="row main row-centered">
@@ -35,12 +35,21 @@
 					<div class="main-login main-center" style="margin-bottom:50px;">
 						<form class="form-horizontal" method="post" action="#">
 							
+							<?php $attributes = array("name" => "signupform");
+							echo form_open("index.php/signup", $attributes);?>
+							
+							
 							<div class="form-group">
 								<label for="name" class="cols-sm-2 control-label">Your Name</label>
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-										<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+										
+										<!-- EDIT HERE -->
+										<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name" value="<?php echo set_value('name'); ?>"/>
+										<span class="text-danger"><?php echo form_error('name'); ?></span>
+										
+										
 									</div>
 								</div>
 							</div>
@@ -49,8 +58,13 @@
 								<label for="email" class="cols-sm-2 control-label">Your Email</label>
 								<div class="cols-sm-10">
 									<div class="input-group">
+									
 										<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-										<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+										
+											<!-- EDIT HERE -->
+										<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email" value="<?php echo set_value('email'); ?>"/>
+										<span class="text-danger"><?php echo form_error('email'); ?></span>
+										
 									</div>
 								</div>
 							</div>
@@ -59,8 +73,14 @@
 								<label for="username" class="cols-sm-2 control-label">Username</label>
 								<div class="cols-sm-10">
 									<div class="input-group">
+									
+									
 										<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-										<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+										
+											<!-- EDIT HERE -->
+										<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username" value="<?php echo set_value('username'); ?>"/>
+										<span class="text-danger"><?php echo form_error('username'); ?></span>
+										
 									</div>
 								</div>
 							</div>
@@ -70,7 +90,14 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-										<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+										
+										
+										
+											
+										<!-- EDIT HERE -->
+										<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password" value="<?php echo set_value('password'); ?>"/>
+										<span class="text-danger"><?php echo form_error('password'); ?></span>
+										
 									</div>
 								</div>
 							</div>
@@ -80,7 +107,13 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-										<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+										
+										
+										
+										<!-- EDIT HERE -->																			
+										<input type="password" class="form-control" name="cpassword" id="cpassword"  placeholder="Confirm your Password" value="<?php echo set_value('cpassword'); ?>"/>
+										<span class="text-danger"><?php echo form_error('cpassword'); ?></span>
+										
 									</div>
 								</div>
 							</div>
@@ -106,7 +139,56 @@
 									
 								</div>
 							</div>
-				
+						<?php echo form_close(); ?>
+						<?php echo $this->session->flashdata('msg'); ?>
+							
+						<?php
+								/*
+								echo form_open('index.php/Account/test_validation');
+								
+								
+								echo validation_errors();
+								
+								
+								echo "<p>name: ";	
+								echo form_input('name');
+								echo "</p>";
+								
+								echo "<p>username: ";	
+								echo form_input('username');
+								echo "</p>";
+								
+								
+								echo "<p>email: ";	
+								echo form_input('email');
+								echo "</p>";
+										
+								echo "<p>Password: ";
+								echo form_password('password');
+								echo "</p>";
+								
+								echo "<p>Confirm Password: ";
+								echo form_password('cpassword');
+								echo "</p>";
+								
+								echo "<p>";
+								echo form_submit('signup_submit','Sign Up');
+								echo "</p>";
+								
+								echo form_close();
+								*/
+						?>
+						
+							
+
+						
+						
+						
+						
+						
+						
+						
+						
 							
 						</form>
 					</div>
