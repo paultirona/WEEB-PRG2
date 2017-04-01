@@ -198,7 +198,7 @@ class Account extends CI_Controller{
 	
 	
 	
-	public function test_validation(){
+	public function signup_validation(){
 		
 		$this->load->library('form_validation');
 		
@@ -222,7 +222,7 @@ class Account extends CI_Controller{
 			
 			if($result)
 			{
-				echo "YEY";
+				$this->load->view('login');
 			}
 			else
 			{
@@ -236,10 +236,7 @@ class Account extends CI_Controller{
 			
 			//redirect('index.php/Account/login');
 		}else{		
-
-			echo "no pass";
-			//redirect('index.php/Account/signup');
-			//$this->load->view('signup');
+			$this->load->view('signup');
 		}
 	
 	}

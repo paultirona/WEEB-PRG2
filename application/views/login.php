@@ -30,7 +30,12 @@
 					</div> 
 					<div class="main-login main-center" style="margin-bottom:50px;">
 					
-						<?php echo validation_errors();?>
+					
+						<span class="text-danger"><?php echo form_error('username'); ?></span>
+									
+						<span class="text-danger"><?php echo form_error('password'); ?></span>
+								
+					
 						<form class="form-horizontal" method="post" action='<?php echo base_url();?>index.php/Account/login_validation'>
 	
 	
@@ -39,10 +44,9 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-										
-										
-										
-										<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+						
+										<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username" value="<?php echo set_value('username'); ?>"/>
+															
 										
 									</div>
 								</div>
@@ -53,11 +57,10 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+				
+										<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password" value="<?php echo set_value('password'); ?>"/>
 										
-										
-										
-										<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
-									
+								
 									</div>
 								</div>
 							</div>
@@ -68,9 +71,11 @@
 								<div class="row row-centered">
 				
 									<div class="form-group login-register col-xs-1">
-										
-										<button type ="button" class="btn btn-primary btn-lg login-button btn-danger" href="home.html">Back</button>
 									
+										<a href='<?php echo base_url()."index.php/account/home"?>'>
+											<button type ="button" class="btn btn-primary btn-lg login-button btn-danger" href="<?php echo base_url()?>index.php/Account/home"   onclick="<?php echo base_url()?>index.php/Account/home">Back</button>
+										</a>
+																			 
 									</div>
 									
 									
@@ -87,33 +92,6 @@
 									
 								</div>
 							</div>
-							
-							
-							
-							<?php
-								//echo form_open('index.php/Account/signup');
-								
-								/*
-								echo form_open('index.php/Account/login_validation');
-								
-								
-								echo validation_errors();
-								
-								echo "<p>username: ";	
-								echo form_input('username');
-								echo "</p>";
-										
-								echo "<p>Password: ";
-								echo form_password('password');
-								echo "</p>";
-								
-								echo "<p>";
-								echo form_submit('login_submit','Login');
-								echo "</p>";
-								
-								echo form_close();
-							*/
-							?>
 							
 							
 						</form>

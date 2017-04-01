@@ -23,32 +23,42 @@
 	
 		<div class="container">
 	
-			<div class="row main row-centered">
+			<div class="row main row-centered"">
 			
 				<div class="col-xs-6 col-md-offset-3">
 
 					<div class="panel-heading">
-					   <div class="panel-title text-center">
+					   <div class="panel-title text-center" >
 							<h1 class="title">OGS Philippines</h1>	
 						</div>
 					</div> 
-					<div class="main-login main-center" style="margin-bottom:50px;">
-						<form class="form-horizontal" method="post" action="#">
+					<div class="main-login main-center">
+					
+					<!--
+					
+					style="margin-bottom:50px;"
+						<//?php echo validation_errors();?>
+					-->
+					
+						<span class="text-danger"><?php echo form_error('name'); ?></span>
+						<span class="text-danger"><?php echo form_error('email'); ?></span>
+						<span class="text-danger"><?php echo form_error('username'); ?></span>
+						<span class="text-danger"><?php echo form_error('password'); ?></span>
+						<span class="text-danger"><?php echo form_error('cpassword'); ?></span>
+									
+									
 							
-							<?php $attributes = array("name" => "signupform");
-							echo form_open("index.php/signup", $attributes);?>
-							
-							
+									
+						<form class="form-horizontal" method="post" action='<?php echo base_url();?>index.php/Account/signup_validation'>
+														
 							<div class="form-group">
 								<label for="name" class="cols-sm-2 control-label">Your Name</label>
 								<div class="cols-sm-10">
 									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-										
+										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>										
 										<!-- EDIT HERE -->
 										<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name" value="<?php echo set_value('name'); ?>"/>
-										<span class="text-danger"><?php echo form_error('name'); ?></span>
-										
+											
 										
 									</div>
 								</div>
@@ -57,14 +67,12 @@
 							<div class="form-group">
 								<label for="email" class="cols-sm-2 control-label">Your Email</label>
 								<div class="cols-sm-10">
-									<div class="input-group">
-									
+									<div class="input-group">								
 										<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
 										
 											<!-- EDIT HERE -->
 										<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email" value="<?php echo set_value('email'); ?>"/>
-										<span class="text-danger"><?php echo form_error('email'); ?></span>
-										
+												
 									</div>
 								</div>
 							</div>
@@ -72,15 +80,12 @@
 							<div class="form-group">
 								<label for="username" class="cols-sm-2 control-label">Username</label>
 								<div class="cols-sm-10">
-									<div class="input-group">
-									
-									
+									<div class="input-group">									
 										<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
 										
 											<!-- EDIT HERE -->
 										<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username" value="<?php echo set_value('username'); ?>"/>
-										<span class="text-danger"><?php echo form_error('username'); ?></span>
-										
+											
 									</div>
 								</div>
 							</div>
@@ -96,8 +101,7 @@
 											
 										<!-- EDIT HERE -->
 										<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password" value="<?php echo set_value('password'); ?>"/>
-										<span class="text-danger"><?php echo form_error('password'); ?></span>
-										
+											
 									</div>
 								</div>
 							</div>
@@ -112,8 +116,7 @@
 										
 										<!-- EDIT HERE -->																			
 										<input type="password" class="form-control" name="cpassword" id="cpassword"  placeholder="Confirm your Password" value="<?php echo set_value('cpassword'); ?>"/>
-										<span class="text-danger"><?php echo form_error('cpassword'); ?></span>
-										
+											
 									</div>
 								</div>
 							</div>
@@ -125,8 +128,11 @@
 				
 									<div class="form-group login-register col-xs-1">
 										
-										<button type ="button" class="btn btn-primary btn-lg login-button btn-danger" href="home.html">Back</button>
-									
+										<a href='<?php echo base_url()."index.php/account/home"?>'>
+											<button type ="button" class="btn btn-primary btn-lg login-button btn-danger" href="<?php echo base_url()?>index.php/Account/home"   onclick="<?php echo base_url()?>index.php/Account/home">Back</button>
+										</a>
+										
+													
 									</div>
 									
 									
@@ -134,62 +140,13 @@
 									</div>
 										
 									<div class="form-group login-register col-xs-1">
-										<button type="button" class="btn btn-primary btn-lg login-button btn-success">Register</button>
+										<button type="submit" class="btn btn-primary btn-lg login-button btn-success">Register</button>
 									</div>
 									
 								</div>
 							</div>
-						<?php echo form_close(); ?>
-						<?php echo $this->session->flashdata('msg'); ?>
 							
-						<?php
-								/*
-								echo form_open('index.php/Account/test_validation');
-								
-								
-								echo validation_errors();
-								
-								
-								echo "<p>name: ";	
-								echo form_input('name');
-								echo "</p>";
-								
-								echo "<p>username: ";	
-								echo form_input('username');
-								echo "</p>";
-								
-								
-								echo "<p>email: ";	
-								echo form_input('email');
-								echo "</p>";
-										
-								echo "<p>Password: ";
-								echo form_password('password');
-								echo "</p>";
-								
-								echo "<p>Confirm Password: ";
-								echo form_password('cpassword');
-								echo "</p>";
-								
-								echo "<p>";
-								echo form_submit('signup_submit','Sign Up');
-								echo "</p>";
-								
-								echo form_close();
-								*/
-						?>
-						
-							
-
-						
-						
-						
-						
-						
-						
-						
-						
-							
+									
 						</form>
 					</div>
 				</div>
