@@ -25,10 +25,10 @@
 			<div class="row main row-centered">
 
 				<div class="col-xs-6 col-md-offset-3">
-
+		
 					<div class="panel-heading">
 					   <div class="panel-title text-center">
-							<h1 class="title">(USERNAME)'s Profile</h1>
+							<h1 class="title"><?php echo $this->session->userdata('username')?>'s Profile</h1>
 						</div>
 					</div>
 					<div class="main-login main-center" style="margin-bottom:50px;">
@@ -39,7 +39,7 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-										<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name" value="Lorem Ipsum"/>
+										<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name" value=""/>
 									</div>
 								</div>
 							</div>

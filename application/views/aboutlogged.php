@@ -50,49 +50,40 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 				
-					<li>
+					<li class="active">
                         <a href='<?php echo base_url()."index.php/account/homelogged"?>'>Home</a>
                     </li>
 					
-                    <li class="active">
+					<li>
+                        <a href='<?php echo base_url()."index.php/account/Shoplogged"?>'>Shop</a>
+					
+                    </li>
+	
+                    <li>
                         <a href='<?php echo base_url()."index.php/account/aboutlogged"?>'>About</a>
                     </li>
-
+             
                     <li>
                         <a href='<?php echo base_url()."index.php/account/contactlogged"?>'>Contact</a>
-                    </li>
+                    </li>			
+				
 					
-					<li>
-                        <a href='<?php echo base_url()."index.php/account/accountdetails"?>'>(USERNAME)</a>
-                    </li>
-					
-					<li>
-                        <a href='<?php echo base_url()."index.php/account/home"?>'>Logout</a>
-                    </li>
-					
-					
-					<!--
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
+					<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="full-width.html">Full Width Page</a>
+                                <a href="">Username: <?php echo $this->session->userdata('username')?></a>
                             </li>
                             <li>
-                                <a href="sidebar.html">Sidebar Page</a>
+                                <a href='<?php echo base_url()."index.php/account/accountdetails"?>'>Account Details</a>
                             </li>
                             <li>
-                                <a href="faq.html">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                            <li>
-                                <a href="pricing.html">Pricing Table</a>
+								<a href='<?php echo base_url()."index.php/account/login"?>'>Logout</a>
+                               
                             </li>
                         </ul>
                     </li>
-					-->
+					
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
