@@ -55,6 +55,10 @@
                         <a href='<?php echo base_url()."index.php/account/home"?>'>Home</a>
                     </li>
 					
+					<li>
+                        <a href='<?php echo base_url()."index.php/account/Shop"?>'>Shop</a>
+                    </li>
+					
                     <li>
                         <a href='<?php echo base_url()."index.php/account/about"?>'>About</a>
                     </li>
@@ -105,8 +109,8 @@
             <!-- Map Column -->
             <div class="col-md-8">
                 <!-- Embedded Google Map -->
-                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
-            </div>
+                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.6073854433266!2d120.99182625011953!3d14.564430381817475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c978d7b7dd4b%3A0x18187504028d4b77!2sDe+La+Salle+University!5e0!3m2!1sen!2sph!4v1491065125569" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
             <!-- Contact Details Column -->
             <div class="col-md-4">
                 <h3>Contact Details</h3>
@@ -116,14 +120,23 @@
                 <p><i class="fa fa-phone"></i> 
                     <abbr title="Phone">P</abbr>: (632) 524-4611 to 18</p>
                 <p><i class="fa fa-envelope-o"></i> 
-                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">paul_tirona@dlsu.edu.ph</a>
+                    <abbr title="Email">E</abbr>: 
+					
+					<span>paul_tirona@dlsu.edu.ph</span>
+					<span>paolo_soriano@dlsu.edu.ph</span>
+					<span>chris_siochi@dlsu.edu.ph</span>
+					
+					<!--
+					<a href="mailto:name@example.com">paul_tirona@dlsu.edu.ph</a>
 					
 					<a href="mailto:name@example.com">paolo_soriano@dlsu.edu.ph </a>
 					<a href="mailto:name@example.com">chris_siochi@dlsu.edu.ph </a>
+					-->
 				</p>
                 <p><i class="fa fa-clock-o"></i> 
                     <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
                 <ul class="list-unstyled list-inline list-social-icons">
+					<!--
                     <li>
                         <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
                     </li>
@@ -136,6 +149,7 @@
                     <li>
                         <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
                     </li>
+					-->
                 </ul>
             </div>
         </div>

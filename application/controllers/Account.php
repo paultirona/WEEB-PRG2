@@ -42,6 +42,28 @@ class Account extends CI_Controller{
 
 	}
 	
+	//VIEWS OF GAMES 
+	
+	public function game_overwatch(){
+		
+		$this->load->view('game-overwatch');
+
+	}
+	
+	//VIEWS OF LOGGED GAMES
+	
+	
+	public function game_overwatch_logged(){
+		
+	
+		if($this->session->userdata('is_logged_in')){
+			$this->load->view('game-overwatch-logged');
+		} else {
+			
+			redirect('index.php/Account/restricted');
+		}	
+
+	}
 	
 	//LOGGED 
 	
@@ -96,10 +118,25 @@ class Account extends CI_Controller{
 	
 	
 	//Unused yet
-	public function accountdetails(){
-		
-		$this->load->view('accountdetails');
+	public function accountdetails()
+	{
+		$this->load->model('model_users');
+		$username = $this->session->userdata('username');
 
+		$data["email"] = $this->model_users->get_email($username);		
+		
+		$this->load->view('accountdetails', $data);
+	
+	}
+	
+	
+	public function test()
+	{
+		echo "THIS IS A TEST PAGE";
+		
+		
+		
+		
 	}
 	
 	
@@ -135,70 +172,16 @@ class Account extends CI_Controller{
 			$this->load->view('login');
 		}
 		
+		/*
 		echo $_POST['username'];
 		echo $this->input->post('username');
+		*/
 	}
 	
-	/*
-	public function signup_validation(){
-		
-		$this->load->library('form_validation');
-		
-		
-		
-		$this->form_validation->set_rules('email','Email','required|trim|valid_email|is_unique[account.email]');
-		
-		$this->form_validation->set_rules('password','Password','required|trim');
-		$this->form_validation->set_rules('cpassword','Cpassword','required|trim|matches[password]');
-		
-		
-		$this->form_validation->set_rules('name','Name','required|trim');
-		$this->form_validation->set_rules('username','Username','required|trim');
-		
-		$this->form_validation->set_message('is_unique', "That email address already exists.");
-	
-
-		if($this->form_validation->run())
-		{
-			
-			
-			
-			
-			
-			
-			$this->load->model('model_users');
-			
-			$result = $this->model_users->add_user();
-			
-			if($result)
-			{
-				echo "YEY";
-			}
-			else
-			{
-				$this->load->view('login');
-			}
-			
-			
-			}else
-		{
-			//echo "no pass :(";
-			
-			//redirect('index.php/Account/signup');
-			
-			$this->load->view('signup');
-		}
-	
-
-	}
-	
-	*/
 	
 	
-	
-	
-	
-	public function signup_validation(){
+	public function signup_validation()
+	{
 		
 		$this->load->library('form_validation');
 		
@@ -231,12 +214,52 @@ class Account extends CI_Controller{
 				$this->load->view('login');
 			}
 			
-			
-			
-			
-			//redirect('index.php/Account/login');
 		}else{		
 			$this->load->view('signup');
+		}
+	
+	}
+	
+	
+	
+	public function update_validation()
+	{
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('opassword','Old Password','required|trim|callback_validate_oldpassword');
+		$this->form_validation->set_rules('npassword','New Password','required|trim');
+		$this->form_validation->set_rules('cpassword','Confirm Password','required|trim|matches[npassword]');
+		
+		//Meaning no error
+		if($this->form_validation->run())
+		{
+			$this->load->model('model_users');
+			$username = $this->session->userdata('username');
+			
+			$result = $this->model_users->update_password($username);
+			
+			if($result)
+			{	
+				
+				
+				$this->load->model('model_users');
+				$username = $this->session->userdata('username');
+				$data["email"] = $this->model_users->get_email($username);	
+				$this->load->view('accountdetails',$data);
+				
+				
+				//echo "Password updated!";
+				
+			}
+			
+			
+		}else{		
+		
+			$this->load->model('model_users');
+			$username = $this->session->userdata('username');
+			$data["email"] = $this->model_users->get_email($username);		
+			
+			$this->load->view('accountdetails',$data);
 		}
 	
 	}
@@ -261,6 +284,27 @@ class Account extends CI_Controller{
 	}
 	
 	
+	public function validate_oldpassword()
+	{
+		$this->load->model('model_users');
+		
+		$data = $this->session->userdata('username');
+		
+		$old = $this->input->post('opassword');
+		
+		$result = $this->model_users->matchOldPassword($data,$old);
+		
+		if($result){			
+			return true;
+		} else{
+			$this->form_validation->set_message('validate_oldpassword','Incorrect old password');
+			return false;
+		}
+		
+		
+	}
+	
+	
 	public function register_user(){
 		$this->load->model('model_users');
 		
@@ -273,6 +317,11 @@ class Account extends CI_Controller{
 		$this->session->sess_destroy();
 		redirect('index.php/Account/login');
 	}
+	
+	
+
+	
+	
 	
 }
 

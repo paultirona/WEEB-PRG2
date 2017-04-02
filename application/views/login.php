@@ -83,9 +83,7 @@
 									</div>
 										
 									<div class="form-group login-register col-xs-1">
-									
-								
-										
+																	
 										<button type="submit" class="btn btn-primary btn-lg login-button btn-success" value="Login">Login</button>
 									
 									</div>

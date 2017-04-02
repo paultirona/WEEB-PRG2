@@ -45,10 +45,16 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-				
+                <ul class="nav navbar-nav navbar-right">
+					
+					
+					
                     <li>
                         <a href='<?php echo base_url()."index.php/account/home"?>'>Home</a>
+                    </li>
+					
+					<li class = "active">
+                        <a href='<?php echo base_url()."index.php/account/Shop"?>'>Shop</a>
                     </li>
 					
 					<li>
@@ -129,7 +135,7 @@
                             <img src="<?php echo base_url();?>assets/img/OW320x150.jpg" alt="">
                             <div class="caption">
                                 <h4 class="pull-right">$24.99</h4>
-                                <h4><a href='<?php echo base_url()."index.php/account/game-overwatch"?>'>Overwatch</a>
+                                <h4><a href='<?php echo base_url()."index.php/account/game_overwatch"?>'>Overwatch</a>
                                 </h4>
                                 <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                             </div>

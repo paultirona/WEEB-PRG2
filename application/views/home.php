@@ -51,6 +51,11 @@
                         <a href='<?php echo base_url()."index.php/account/home"?>'>Home</a>
                     </li>
 					
+					
+					<li>
+                        <a href='<?php echo base_url()."index.php/account/Shop"?>'>Shop</a>
+                    </li>
+					
 					<li>
                         <a href='<?php echo base_url()."index.php/account/about"?>'>About</a>
                     </li>

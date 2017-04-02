@@ -1,7 +1,4 @@
 <?php
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -28,27 +25,21 @@
 			<div class="row main row-centered">
 
 				<div class="col-xs-6 col-md-offset-3">
-		
+
 					<div class="panel-heading">
 					   <div class="panel-title text-center">
-							<h1 class="title"><?php echo $this->session->userdata('username')?>'s Profile</h1>
+							<h1 class="title">(USERNAME)'s Profile</h1>
 						</div>
 					</div>
 					<div class="main-login main-center" style="margin-bottom:50px;">
-						<form class="form-horizontal" method="post" action='<?php echo base_url();?>index.php/Account/update_validation'>
+						<form class="form-horizontal" method="post" action="#">
 
 							<div class="form-group">
-							
-								<span class="text-danger"><?php echo form_error('opassword'); ?></span>
-								<span class="text-danger"><?php echo form_error('npassword'); ?></span>
-								<span class="text-danger"><?php echo form_error('cpassword'); ?></span>
-				
-								
 								<label for="name" class="cols-sm-2 control-label">Your Name</label>
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-										<input type="text" class="form-control" name="name" id="name"  placeholder="" value="<?php echo $this->session->userdata('username')?>" readonly>
+										<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name" value="Lorem Ipsum"/>
 									</div>
 								</div>
 							</div>
@@ -58,32 +49,27 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-																
-										<input type="text" class="form-control" name="email" id="email"  placeholder="" value="<?php echo $email?>" readonly>
-																													
+										<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email" value="Lorem Ipsum@yahoo.com"/>
 									</div>
 								</div>
 							</div>
 
-							
-							
-							<!-- EDIT HERE FOR ACCOUNT DETAILS CONTROLLER -->
 							<div class="form-group">
 								<label for="password" class="cols-sm-2 control-label">Old Password</label>
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-										<input type="password" class="form-control" name="opassword" id="opassword"  placeholder="Enter your Old Password" value="<?php echo set_value('opassword'); ?>" >
+										<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Old Password"/>
 									</div>
 								</div>
 							</div>
 
-							<div class="form-group">
+              <div class="form-group">
 								<label for="password" class="cols-sm-2 control-label">New Password</label>
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-										<input type="password" class="form-control" name="npassword" id="npassword"  placeholder="Enter your New Password" value = "<?php echo set_value('npassword'); ?>"/>
+										<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your New Password"/>
 									</div>
 								</div>
 							</div>
@@ -93,7 +79,7 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-										<input type="password" class="form-control" name="cpassword" id="cpassword"  placeholder="Confirm your New Password" value = ""<?php echo set_value('cpassword'); ?>""/>
+										<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your New Password"/>
 									</div>
 								</div>
 							</div>
@@ -104,11 +90,8 @@
 								<div class="row row-centered">
 
 									<div class="form-group login-register col-xs-1">
-									
 
-										<a href='<?php echo base_url()."index.php/account/homelogged"?>'>
-											<button type ="button" class="btn btn-primary btn-lg login-button btn-danger">Back</button>
-										</a>
+										<button type ="button" class="btn btn-primary btn-lg login-button btn-danger" href="home.html">Back</button>
 
 									</div>
 
@@ -117,7 +100,7 @@
 									</div>
 
 									<div class="form-group login-register" style="margin-left:110px;">
-										<button type="submit" class="btn btn-primary btn-lg login-button btn-success">Save Changes</button>
+										<button type="button" class="btn btn-primary btn-lg login-button btn-success">Save Changes</button>
 									</div>
 
 								</div>
