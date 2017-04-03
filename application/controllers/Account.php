@@ -57,7 +57,16 @@ class Account extends CI_Controller{
 		
 	
 		if($this->session->userdata('is_logged_in')){
-			$this->load->view('game-overwatch-logged');
+			
+			
+		//	$tempInt = 1;
+			$data['GameID'] = 1;
+		//	$GameID = $this->session->set_flashdata('GameID', $tempInt);
+			
+			//$this->session->set_flashdata('recordid', $recordid);
+
+			$this->load->view('game-overwatch-logged',$data);
+		
 		} else {
 			
 			redirect('index.php/Account/restricted');
@@ -73,6 +82,18 @@ class Account extends CI_Controller{
 			$this->load->view('homelogged');
 		} else {
 			
+			redirect('index.php/Account/restricted');
+		}	
+		
+	}
+	
+	
+	public function historytransaction(){
+	
+		if($this->session->userdata('is_logged_in')){
+			$this->load->view('historytransaction');
+		} else {
+
 			redirect('index.php/Account/restricted');
 		}	
 		
@@ -113,6 +134,22 @@ class Account extends CI_Controller{
 	}
 	
 	
+	public function payment(){
+	
+		if($this->session->userdata('is_logged_in')){
+			
+			
+			$data['GameID'] = $this->input->post('GameID');
+			//$GameID = $this->input->post('GameID');  
+			
+			$this->load->view('payment',$data);
+		} else {
+			redirect('index.php/Account/restricted');
+		}	
+		
+	}
+	
+	
 	
 	
 	
@@ -133,8 +170,31 @@ class Account extends CI_Controller{
 	public function test()
 	{
 		echo "THIS IS A TEST PAGE";
+		echo "<br>";
 		
 		
+		$this->load->model('model_users');
+		
+	//	$this->model_users->get_gameInfotest(1);
+		
+	//	$this->model_users->add_transaction(1,1);
+		
+		$username = $this->session->userdata('username');
+		
+		$UserID = $this->model_users->get_userID($username);
+		
+		$IntUserID = (int)$UserID;
+		echo $UserID;
+		echo "<br>";
+		echo "Type is: ";
+		echo gettype($UserID);
+		
+		echo "<br>";
+		echo "<br>";
+		echo $IntUserID;
+		echo "<br>";
+		echo "Type is: ";
+		echo gettype($IntUserID);
 		
 		
 	}
@@ -172,10 +232,6 @@ class Account extends CI_Controller{
 			$this->load->view('login');
 		}
 		
-		/*
-		echo $_POST['username'];
-		echo $this->input->post('username');
-		*/
 	}
 	
 	
@@ -263,6 +319,70 @@ class Account extends CI_Controller{
 		}
 	
 	}
+	
+	
+	
+	public function pay_validation()
+	{
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('card-holder-name','Card Holders Name','required|trim');
+		$this->form_validation->set_rules('card-number','Card Number','required|trim');
+		$this->form_validation->set_rules('cvv','Card CVV','required|trim');
+		
+		//Meaning no error
+		if($this->form_validation->run())
+		{
+			$this->load->model('model_users');
+			$username = $this->session->userdata('username');
+			
+			$UserID = $this->model_users->get_userID($username);
+			
+			$GameID = $this->input->post('GameID');
+			
+			
+		//	$GameInfo = $this->model_users->get_gameInfo($GameID);
+			
+			
+			echo "OH YEA BABY TEST ME BABY";
+			
+			
+			
+			echo "Type is: ";
+			echo gettype($GameID);
+				
+		//	$this->model_users->add_transaction($UserID,1);
+			/*
+			if($result)
+			{	
+				
+				/*
+				
+				$this->load->model('model_users');
+				$username = $this->session->userdata('username');
+				$data["email"] = $this->model_users->get_email($username);	
+				$this->load->view('accountdetails',$data);
+				
+				
+				//echo "Password updated!";
+				
+				
+				$this->load->view('historytransaction');
+				
+			}
+			*/
+			
+			
+		//	$this->load->view('historytransaction');
+			
+			
+		}else{		
+		
+			$this->load->view('payment');
+		}
+	
+	}
+	
 	
 	
 	

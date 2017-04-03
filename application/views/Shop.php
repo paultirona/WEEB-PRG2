@@ -85,13 +85,21 @@
     <div class="container">
 
         <div class="row">
-
+			
             <div class="col-md-3">
                 <p class="lead">Shop Name</p>
                 <div class="list-group">
+				
+				
+					<span class="list-group-item">Action</span>
+					<span class="list-group-item">Strategy</span>
+					<span class="list-group-item">RPG</span>
+					<!--
                     <a href="#" class="list-group-item">Action</a>
                     <a href="#" class="list-group-item">Strategy</a>
                     <a href="#" class="list-group-item">RPG</a>
+					-->
+
                 </div>
             </div>
 
@@ -134,10 +142,10 @@
                         <div class="thumbnail">
                             <img src="<?php echo base_url();?>assets/img/OW320x150.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$24.99</h4>
+                                <h4 class="pull-right"> Php 2500.00</h4>
                                 <h4><a href='<?php echo base_url()."index.php/account/game_overwatch"?>'>Overwatch</a>
                                 </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                <p>Overwatch is a team-based multiplayer first-person shooter video game developed and published by Blizzard Entertainment.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">15 reviews</p>
@@ -254,7 +262,7 @@
         </div>
 
     </div>
-	<!-- Pagination -->
+	<!-- Pagination 
         <div class="row text-center">
             <div class="col-lg-12">
                 <ul class="pagination">
@@ -282,7 +290,7 @@
                 </ul>
             </div>
         </div>
-	
+	-->
 	
     <!-- /.container -->
 

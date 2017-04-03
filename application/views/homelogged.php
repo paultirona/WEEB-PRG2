@@ -77,6 +77,11 @@
                             <li>
                                 <a href='<?php echo base_url()."index.php/account/accountdetails"?>'>Account Details</a>
                             </li>
+							
+							<li>
+                                <a href='<?php echo base_url()."index.php/account/historytransaction"?>'>Transactions</a>
+                            </li>
+							
                             <li>
 								<a href='<?php echo base_url()."index.php/account/login"?>'>Logout</a>
                                

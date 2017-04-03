@@ -1,4 +1,7 @@
 <?php
+
+	
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +57,7 @@
                         <a href='<?php echo base_url()."index.php/account/home"?>'>Home</a>
                     </li>
 					
-					<li>
+					<li class = "active">
                         <a href='<?php echo base_url()."index.php/account/Shop"?>'>Shop</a>
                     </li>
 					
@@ -90,7 +93,7 @@
                 <ol class="breadcrumb">
                     <li><a href='<?php echo base_url()."index.php/account/home"?>'>Home</a>
                     </li>
-                    <li><a href='<?php echo base_url()."index.php/account/Shop"?>'>Action Games</a>
+                    <li><a href='<?php echo base_url()."index.php/account/Shop"?>'>Games</a>
                     </li>
                     <li class="active">Overwatch (PC)</li>
                 </ol>
@@ -149,6 +152,10 @@
                     <li>Release Date: May 23, 2016</li>
                     <li>Also available on: PS4, XONE</li>
                 </ul>
+
+				<a href='<?php echo base_url()."index.php/account/signup"?>' class="btn btn-success btn-lg">Purchase</a>
+
+				
             </div>
 
         </div>
@@ -174,10 +181,11 @@
 
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="service-one">
-                        <h4>Service One</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    </div>
+                        <h4>Description</h4>
+                        <p>
+						Essentially a hero-based shooter, Overwatch assigns players into two teams of six, with each player selecting one of 24 pre-defined hero characters with unique movement, attributes, and abilities whose roles are divided into four categories: Offense, Defense, Tank, and Support.
+						Players on a team work together to secure and defend control points on a map and/or escort a payload across the map in a limited amount of time. Players gain cosmetic rewards that do not affect gameplay, such as character skins and victory poses, as they continue to play in matches.					
+						</p>         </div>
                     <div class="tab-pane fade" id="service-two">
                         <h4>Service Two</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>

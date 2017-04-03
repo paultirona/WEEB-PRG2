@@ -84,8 +84,50 @@ class Model_users extends CI_Model{
 			return false;
 		}
 	}
+	
+	
+	
+	public function add_transaction($UserID,$id)
+	{
+		
+		
+		$this->db->select('GameName,Price,GameKey');
+		$this->db->where('GameID',$id);
+		$query = $this->db->get('gameinfo');
+		
+		
+		foreach ($query->result() as $row)
+		{
+			$gamename = $row->GameName;
+		//	echo "<br>";
+			$price = $row->Price;
+		//	echo "<br>";
+		//	echo $row->GameKey;
+		}
+		
+		
+		echo $gamename;
+		echo $price;
+	
+		
 
-	// insert
+
+		
+		
+		$data = array(
+			
+			'UserID' => $UserID,
+			'GameName' =>  $gamename,
+			'TransacDate' => date("Y-m-d"),
+			'Price' =>  $price
+		
+		);
+		
+		$this->db->insert('transaction',$data);
+		
+	}
+	
+
 	
 	
 	function insert_user($data)
@@ -104,6 +146,88 @@ class Model_users extends CI_Model{
 		return $row->email;
 	//	echo $row->email;	
 	}
+	
+	public function get_gameInfo($id)
+	{
+		$this->db->select('GameName,Price,GameKey');
+		$this->db->where('GameID',$id);
+		$query = $this->db->get('gameinfo');
+		
+		
+		//$row = $query->row();
+		/*
+		echo $row->GameName;
+		echo $row->Price;
+		*/
+		return $query;
+		
+		
+		
+		/*
+		foreach ($query->result() as $row)
+		{
+			echo $row->GameName;
+			echo $row->Price;
+			echo $row->GameKey;
+		}
+		*/
+		
+	
+		
+		//return $query;
+	
+		
+	}
+	
+	//this is a test
+	public function get_gameInfotest($id)
+	{
+		$this->db->select('GameName,Price,GameKey');
+		$this->db->where('GameID',$id);
+		$query = $this->db->get('gameinfo');
+		
+		$this->load->helper('date');
+		
+		$row = $query->row();
+		
+		echo $row->GameName;
+		echo $row->Price;
+		
+		echo "<br>";
+		echo time();
+		echo "<br>";
+		echo date("Y-m-d");
+		
+		
+		
+		/*
+		foreach ($query->result() as $row)
+		{
+			echo $row->GameName;
+			echo $row->Price;
+			echo $row->GameKey;
+		}
+		*/
+		
+	
+		
+		//return $query;
+	
+		
+	}
+	
+	public function get_userID($data)
+	{
+		$this->db->select('UserID');
+		$this->db->where('Username',$data);
+		$query = $this->db->get('account');	
+		$row = $query->row();
+		
+		return $row->UserID;
+		
+	}
+	
+	
 	
 	//data is current username
 	/*

@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>About-Logged</title>
+    <title>historytransaction</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -59,7 +59,7 @@
 					
                     </li>
 	
-                    <li class="active">
+                    <li>
                         <a href='<?php echo base_url()."index.php/account/aboutlogged"?>'>About</a>
                     </li>
              
@@ -77,6 +77,7 @@
                             <li>
                                 <a href='<?php echo base_url()."index.php/account/accountdetails"?>'>Account Details</a>
                             </li>
+							
 							<li>
                                 <a href='<?php echo base_url()."index.php/account/historytransaction"?>'>Transactions</a>
                             </li>
@@ -101,13 +102,12 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">About
-                 
-                </h1>
+                <h1 class="page-header"> <?php echo $this->session->userdata('username')?>'s Transactions</h1>
+               
                 <ol class="breadcrumb">
                     <li><a href='<?php echo base_url()."index.php/account/homelogged"?>'>Home</a>
                     </li>
-                    <li class="active">About</li>
+                    <li class="active">Transactions</li>
                 </ol>
             </div>
         </div>
@@ -115,86 +115,51 @@
 
 <!-- Intro Content -->
         <div class="row">
-            <div class="col-md-6">
-                <img class="img-responsive" src="<?php echo base_url();?>assets/img/aboutmain.jpg" alt="">
-            </div>
-            <div class="col-md-6">
-                <h2>About OGS Philippines</h2>
-                <p>Sell</p>
-                <p>Game Reviews</p>
-                <p>Shop</p>
-            </div>
+		
+			<!-- start editing here -->
+			
+			
+			
+			<table class="table">
+				<thead>
+					<tr>
+					  <th>#</th>
+					  <th>Game Name</th>
+					  <th>Date of Purchase</th>
+					  <th>Price</th>
+					</tr>
+				</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>Overwatch</td>
+					<td>September 11,2001</td>
+					<td>60$</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Warcraft</td>
+					<td>Feb 10, 2017</td>
+					<td>50$</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td>Starcraft 2</td>
+					<td>Dec 25, 1995</td>
+					<td>40$</td>
+				</tr>
+			</tbody>
+
+			</table>
+		
+		
+		
+		
         </div>
         <!-- /.row -->
 
-        <!-- Team Members -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">Our Team</h2>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="thumbnail">
-                    <img class="img-responsive" src="<?php echo base_url();?>assets/img/garrosh.png" alt="">
-                    <div class="caption">
-                        <h3>Paul Tirona<br>
-                            <small>Group Leader</small>
-                        </h3>
-                        <p>Work Hard, Play Harder!</p>
-                        <ul class="list-inline">
-                            <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="thumbnail">
-                    <img class="img-responsive" src="<?php echo base_url();?>assets/img/hanzo.png" alt="">
-                    <div class="caption">
-                        <h3>Paolo Soriano<br>
-                            <small>Drummerboi</small>
-                        </h3>
-                        <p>Training all day, everyday!</p>
-                        <ul class="list-inline">
-                            <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="thumbnail">
-                    <img class="img-responsive" src="<?php echo base_url();?>assets/img/siochi.jpg" alt="">
-                    <div class="caption">
-                        <h3>Christopher Siochi<br>
-                            <small>Weeb Lord</small>
-                        </h3>
-                        <p>Cram all day until the due date!</p>
-                        <ul class="list-inline">
-                            <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            
-        <!-- /.row -->
-
         
-        <!-- /.row -->
+
 
         <hr>
 
