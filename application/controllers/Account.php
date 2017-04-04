@@ -150,6 +150,18 @@ class Account extends CI_Controller{
 	}
 	
 	
+	public function payment_overwatch(){
+	
+		if($this->session->userdata('is_logged_in')){
+			
+			$this->load->view('payment-overwatch');
+		} else {
+			redirect('index.php/Account/restricted');
+		}	
+		
+	}
+	
+	
 	
 	
 	
@@ -322,66 +334,7 @@ class Account extends CI_Controller{
 	
 	
 	
-	public function pay_validation()
-	{
-		$this->load->library('form_validation');
-		
-		$this->form_validation->set_rules('card-holder-name','Card Holders Name','required|trim');
-		$this->form_validation->set_rules('card-number','Card Number','required|trim');
-		$this->form_validation->set_rules('cvv','Card CVV','required|trim');
-		
-		//Meaning no error
-		if($this->form_validation->run())
-		{
-			$this->load->model('model_users');
-			$username = $this->session->userdata('username');
-			
-			$UserID = $this->model_users->get_userID($username);
-			
-			$GameID = $this->input->post('GameID');
-			
-			
-		//	$GameInfo = $this->model_users->get_gameInfo($GameID);
-			
-			
-			echo "OH YEA BABY TEST ME BABY";
-			
-			
-			
-			echo "Type is: ";
-			echo gettype($GameID);
-				
-		//	$this->model_users->add_transaction($UserID,1);
-			/*
-			if($result)
-			{	
-				
-				/*
-				
-				$this->load->model('model_users');
-				$username = $this->session->userdata('username');
-				$data["email"] = $this->model_users->get_email($username);	
-				$this->load->view('accountdetails',$data);
-				
-				
-				//echo "Password updated!";
-				
-				
-				$this->load->view('historytransaction');
-				
-			}
-			*/
-			
-			
-		//	$this->load->view('historytransaction');
-			
-			
-		}else{		
-		
-			$this->load->view('payment');
-		}
 	
-	}
 	
 	
 	
@@ -441,7 +394,41 @@ class Account extends CI_Controller{
 	
 
 	
+	public function pay_validation_overwatch()
+	{
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('card-holder-name','Card Holders Name','required|trim');
+		$this->form_validation->set_rules('card-number','Card Number','required|trim');
+		$this->form_validation->set_rules('cvv','Card CVV','required|trim');
+		
+		//Meaning no error
+		if($this->form_validation->run())
+		{
+			$this->load->model('model_users');
+			$username = $this->session->userdata('username');
+			
+			$UserID = $this->model_users->get_userID($username);
+			
+			$IntUserID = (int)$UserID;
+			
+			
+			$GameID = $this->input->post('GameID');
+			$IntGameID = (int)$GameID;
+			
+			
+			$this->model_users->add_transaction($IntUserID,$IntGameID);
+			
+			
+		
+			$this->load->view('homelogged');
+			
+		}else{		
+			
+			$this->load->view('payment-overwatch');
+		}
 	
+	}
 	
 }
 

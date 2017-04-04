@@ -1,16 +1,5 @@
 <?php
 
-
-	echo "Game ID is: ";
-	echo $GameID;
-	echo $this->session->userdata('username');
-/*
-	
-
-
-	echo "Game ID is: ";
-	echo $_GET['id'];
-*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -135,7 +124,7 @@
 			<span class="text-danger"><?php echo form_error('card-number'); ?></span>
 			<span class="text-danger"><?php echo form_error('cvv'); ?></span>
 								
-			<form class="form-horizontal" role="form" method="post" action='<?php echo base_url();?>index.php/Account/pay_validation'>
+			<form class="form-horizontal" role="form" method="post" action='<?php echo base_url();?>index.php/Account/pay_validation_overwatch'>
 			
 				<fieldset>
 				<!--
@@ -211,7 +200,7 @@
 				  <div class="form-group">
 					<div class="col-sm-offset-3 col-sm-9">
 					  <button type="submit" class="btn btn-success">Pay Now</button>
-					   <input type="hidden" name="GameID" value=$GameID>
+					  <input type="hidden" name="GameID" value=1>
 					</div>
 				  </div>
 				</fieldset>

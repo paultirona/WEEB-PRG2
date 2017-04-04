@@ -106,14 +106,6 @@ class Model_users extends CI_Model{
 		}
 		
 		
-		echo $gamename;
-		echo $price;
-	
-		
-
-
-		
-		
 		$data = array(
 			
 			'UserID' => $UserID,
@@ -147,6 +139,8 @@ class Model_users extends CI_Model{
 	//	echo $row->email;	
 	}
 	
+	
+	
 	public function get_gameInfo($id)
 	{
 		$this->db->select('GameName,Price,GameKey');
@@ -154,28 +148,8 @@ class Model_users extends CI_Model{
 		$query = $this->db->get('gameinfo');
 		
 		
-		//$row = $query->row();
-		/*
-		echo $row->GameName;
-		echo $row->Price;
-		*/
 		return $query;
 		
-		
-		
-		/*
-		foreach ($query->result() as $row)
-		{
-			echo $row->GameName;
-			echo $row->Price;
-			echo $row->GameKey;
-		}
-		*/
-		
-	
-		
-		//return $query;
-	
 		
 	}
 	
