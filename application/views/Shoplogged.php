@@ -175,10 +175,10 @@
                         <div class="thumbnail">
                             <img src="<?php echo base_url();?>assets/img/HEARTHSTONE320x150.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$64.99</h4>
-                                <h4><a href="#">Second Product</a>
+                                <h4 class="pull-right">Php 50</h4>
+                                <h4><a href='<?php echo base_url()."index.php/account/game_hearthstone"?>'>Hearthstone</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Hearthstone, originally known as Hearthstone: Heroes of Warcraft, is a free-to-play online collectible card video game developed and published by Blizzard Entertainment.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">12 reviews</p>
@@ -197,10 +197,11 @@
                         <div class="thumbnail">
                             <img src="<?php echo base_url();?>assets/img/LOTV320x150.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$74.99</h4>
-                                <h4><a href="#">Third Product</a>
+                                <h4 class="pull-right">Php 800</h4>
+                                <h4>
+								<a href='<?php echo base_url()."index.php/account/game_legacyofthevoid"?>'>Legacy of the Void</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>StarCraft II: Legacy of the Void is a standalone expansion pack to the military science fiction real-time strategy game StarCraft II: Wings of Liberty, and the third and final part of the StarCraft II trilogy developed by Blizzard Entertainment.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">31 reviews</p>
@@ -219,10 +220,10 @@
                         <div class="thumbnail">
                             <img src="<?php echo base_url();?>assets/img/SHADOW320x150.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$84.99</h4>
-                                <h4><a href="#">Fourth Product</a>
+                                <h4 class="pull-right">Php 2000</h4>
+                                <h4><a href='<?php echo base_url()."index.php/account/game_shadowofmordor"?>'>Shadow of Mordor</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Middle-earth: Shadow of Mordor is an open world action-role playing video game developed by Monolith Productions and published by Warner Bros. Interactive Entertainment. An original adaptation of the legendarium created by J. R. R. Tolkien, the game is based on Tolkien's fantasy novels The Hobbit and The Lord of the Rings and is heavily inspired by director Peter Jackson's The Lord of the Rings and The Hobbit film adaptations.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">6 reviews</p>
@@ -241,10 +242,10 @@
                         <div class="thumbnail">
                             <img src="<?php echo base_url();?>assets/img/HONOR320x150.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="#">Fifth Product</a>
+                               <h4 class="pull-right">Php 2900</h4>
+                                <h4><a href='<?php echo base_url()."index.php/account/game_forhonor"?>'>For Honor</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>For Honor is a hack and slash fighting game developed and published by Ubisoft for Microsoft Windows, PlayStation 4, and Xbox One.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">18 reviews</p>
