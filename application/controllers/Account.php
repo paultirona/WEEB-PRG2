@@ -42,7 +42,7 @@ class Account extends CI_Controller{
 
 	}
 	
-	//VIEWS OF GAMES 
+	//////////////////////VIEWS OF GAMES//////////////////////////////////// 
 	
 	public function game_overwatch(){
 		
@@ -50,7 +50,30 @@ class Account extends CI_Controller{
 
 	}
 	
-	//VIEWS OF LOGGED GAMES
+	public function game_hearthstone(){
+		
+		$this->load->view('game-hearthstone');
+
+	}
+	
+	public function game_starcraft(){
+		
+		$this->load->view('game-starcraft');
+
+	}
+	
+	public function game_mordor(){
+		
+		$this->load->view('game-mordor');
+
+	}
+	
+	public function game_forhonor(){
+		
+		$this->load->view('game-forhonor');
+
+	}
+	///////////////////////VIEWS OF LOGGED GAMES////////////////////////////
 	
 	
 	public function game_overwatch_logged(){
@@ -58,14 +81,9 @@ class Account extends CI_Controller{
 	
 		if($this->session->userdata('is_logged_in')){
 			
-			
-		//	$tempInt = 1;
-			$data['GameID'] = 1;
-		//	$GameID = $this->session->set_flashdata('GameID', $tempInt);
-			
-			//$this->session->set_flashdata('recordid', $recordid);
+	
 
-			$this->load->view('game-overwatch-logged',$data);
+			$this->load->view('game-overwatch-logged');
 		
 		} else {
 			
@@ -74,7 +92,67 @@ class Account extends CI_Controller{
 
 	}
 	
-	//LOGGED 
+	public function game_hearthstone_logged(){
+		
+	
+		if($this->session->userdata('is_logged_in')){
+			
+			$this->load->view('game-hearthstone-logged');
+		
+		} else {
+			
+			redirect('index.php/Account/restricted');
+		}	
+
+	}
+	
+	public function game_starcraft_logged(){
+		
+	
+		if($this->session->userdata('is_logged_in')){
+			
+	
+
+			$this->load->view('game-starcraft-logged');
+		
+		} else {
+			
+			redirect('index.php/Account/restricted');
+		}	
+
+	}
+	
+	public function game_mordor_logged(){
+		
+	
+		if($this->session->userdata('is_logged_in')){
+			
+			$this->load->view('game-mordor-logged');
+		
+		} else {
+			
+			redirect('index.php/Account/restricted');
+		}	
+
+	}
+	
+	public function game_forhonor_logged(){
+		
+	
+		if($this->session->userdata('is_logged_in')){
+			
+			$this->load->view('game-forhonor-logged');
+		
+		} else {
+			
+			redirect('index.php/Account/restricted');
+		}	
+
+	}
+	
+	
+	///////////////////////VIEWS OF NORMAL LOGGED ////////////////////////////
+	
 	
 	public function homelogged(){
 	
@@ -91,7 +169,22 @@ class Account extends CI_Controller{
 	public function historytransaction(){
 	
 		if($this->session->userdata('is_logged_in')){
-			$this->load->view('historytransaction');
+			
+			$this->load->model('model_users');
+			
+			
+			$username = $this->session->userdata('username');
+			
+			$UserID = $this->model_users->get_userID($username);
+		
+			$IntUserID = (int)$UserID;
+			
+			
+			$data['trans'] = $this->model_users->get_transaction($IntUserID);
+			
+			
+			
+			$this->load->view('historytransaction',$data);
 		} else {
 
 			redirect('index.php/Account/restricted');
@@ -133,23 +226,7 @@ class Account extends CI_Controller{
 		
 	}
 	
-	
-	public function payment(){
-	
-		if($this->session->userdata('is_logged_in')){
-			
-			
-			$data['GameID'] = $this->input->post('GameID');
-			//$GameID = $this->input->post('GameID');  
-			
-			$this->load->view('payment',$data);
-		} else {
-			redirect('index.php/Account/restricted');
-		}	
-		
-	}
-	
-	
+	/////////////////////////////////PAYMENT VIEWS///////////////////////////////
 	public function payment_overwatch(){
 	
 		if($this->session->userdata('is_logged_in')){
@@ -160,6 +237,56 @@ class Account extends CI_Controller{
 		}	
 		
 	}
+	
+	
+	public function payment_hearthstone(){
+	
+		if($this->session->userdata('is_logged_in')){
+			
+			$this->load->view('payment-hearthstone');
+		} else {
+			redirect('index.php/Account/restricted');
+		}	
+		
+	}
+	
+	
+	public function payment_starcraft(){
+	
+		if($this->session->userdata('is_logged_in')){
+			
+			$this->load->view('payment-starcraft');
+		} else {
+			redirect('index.php/Account/restricted');
+		}	
+		
+	}
+	
+	
+	public function payment_mordor(){
+	
+		if($this->session->userdata('is_logged_in')){
+			
+			$this->load->view('payment-mordor');
+		} else {
+			redirect('index.php/Account/restricted');
+		}	
+		
+	}
+	
+	public function payment_forhonor(){
+	
+		if($this->session->userdata('is_logged_in')){
+			
+			$this->load->view('payment-forhonor');
+		} else {
+			redirect('index.php/Account/restricted');
+		}	
+		
+	}
+	
+	///////////////////////////////PAYMENT VIEWS////////////////////////////////////
+
 	
 	
 	
@@ -181,6 +308,8 @@ class Account extends CI_Controller{
 	
 	public function test()
 	{
+		
+		/*
 		echo "THIS IS A TEST PAGE";
 		echo "<br>";
 		
@@ -207,6 +336,15 @@ class Account extends CI_Controller{
 		echo "<br>";
 		echo "Type is: ";
 		echo gettype($IntUserID);
+		*/
+		
+		//ABOVE IS FIRST TEST CASE
+		
+		
+		$this->load->model('model_users');
+		$data['trans'] = $this->model_users->get_transaction(1);
+		
+		$this->load->view('test',$data);
 		
 		
 	}
@@ -426,6 +564,150 @@ class Account extends CI_Controller{
 		}else{		
 			
 			$this->load->view('payment-overwatch');
+		}
+	
+	}
+	
+	public function pay_validation_hearthstone()
+	{
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('card-holder-name','Card Holders Name','required|trim');
+		$this->form_validation->set_rules('card-number','Card Number','required|trim');
+		$this->form_validation->set_rules('cvv','Card CVV','required|trim');
+		
+		//Meaning no error
+		if($this->form_validation->run())
+		{
+			$this->load->model('model_users');
+			$username = $this->session->userdata('username');
+			
+			$UserID = $this->model_users->get_userID($username);
+			
+			$IntUserID = (int)$UserID;
+			
+			
+			$GameID = $this->input->post('GameID');
+			$IntGameID = (int)$GameID;
+			
+			
+			$this->model_users->add_transaction($IntUserID,$IntGameID);
+			
+			
+		
+			$this->load->view('homelogged');
+			
+		}else{		
+			
+			$this->load->view('payment-hearthstones');
+		}
+	
+	}
+	
+	public function pay_validation_starcraft()
+	{
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('card-holder-name','Card Holders Name','required|trim');
+		$this->form_validation->set_rules('card-number','Card Number','required|trim');
+		$this->form_validation->set_rules('cvv','Card CVV','required|trim');
+		
+		//Meaning no error
+		if($this->form_validation->run())
+		{
+			$this->load->model('model_users');
+			$username = $this->session->userdata('username');
+			
+			$UserID = $this->model_users->get_userID($username);
+			
+			$IntUserID = (int)$UserID;
+			
+			
+			$GameID = $this->input->post('GameID');
+			$IntGameID = (int)$GameID;
+			
+			
+			$this->model_users->add_transaction($IntUserID,$IntGameID);
+			
+			
+		
+			$this->load->view('homelogged');
+			
+		}else{		
+			
+			$this->load->view('payment-starcraft');
+		}
+	
+	}
+	
+	public function pay_validation_mordor()
+	{
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('card-holder-name','Card Holders Name','required|trim');
+		$this->form_validation->set_rules('card-number','Card Number','required|trim');
+		$this->form_validation->set_rules('cvv','Card CVV','required|trim');
+		
+		//Meaning no error
+		if($this->form_validation->run())
+		{
+			$this->load->model('model_users');
+			$username = $this->session->userdata('username');
+			
+			$UserID = $this->model_users->get_userID($username);
+			
+			$IntUserID = (int)$UserID;
+			
+			
+			$GameID = $this->input->post('GameID');
+			$IntGameID = (int)$GameID;
+			
+			
+			$this->model_users->add_transaction($IntUserID,$IntGameID);
+			
+			
+		
+			$this->load->view('homelogged');
+			
+		}else{		
+			
+			$this->load->view('payment-mordor');
+		}
+	
+	}
+	
+	public function pay_validation_forhonor()
+	{
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('card-holder-name','Card Holders Name','required|trim');
+		$this->form_validation->set_rules('card-number','Card Number','required|trim');
+		$this->form_validation->set_rules('cvv','Card CVV','required|trim');
+		
+		//Meaning no error
+		if($this->form_validation->run())
+		{
+			$this->load->model('model_users');
+			$username = $this->session->userdata('username');
+			
+			$UserID = $this->model_users->get_userID($username);
+			
+			$IntUserID = (int)$UserID;
+			
+			
+			$GameID = $this->input->post('GameID');
+			$IntGameID = (int)$GameID;
+			
+			
+			$this->model_users->add_transaction($IntUserID,$IntGameID);
+			
+			
+		
+			$this->load->view('homelogged');
+			
+		}else{		
+			
+			$this->load->view('payment-forhonor');
 		}
 	
 	}

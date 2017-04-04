@@ -1,6 +1,8 @@
 <html>
 <body>
 <?php
+	
+	
 
 
 	
@@ -8,10 +10,21 @@
 	//	echo $row->GameName;
 ?>
 
-<div class="alert alert-warning">
-    <a href="#" class="close" data-dismiss="alert">&times;</a>
-    <strong>Warning!</strong> There was a problem with your network connection.
-</div>
+
+<?php
+
+					foreach($trans->result() as $row)
+					{
+						?><tr>
+						<td><?php echo $row->TransacID;?></td>
+						<td><?php echo $row->GameName;?></td>
+						<td><?php echo $row->TransacDate;?></td>
+						<td><?php echo $row->Price;?></td>
+						</tr>
+						<?php echo "<br>"?>
+					
+<?php 				}
+?>
 
 </body>
 

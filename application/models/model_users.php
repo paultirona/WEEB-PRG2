@@ -140,56 +140,6 @@ class Model_users extends CI_Model{
 	}
 	
 	
-	
-	public function get_gameInfo($id)
-	{
-		$this->db->select('GameName,Price,GameKey');
-		$this->db->where('GameID',$id);
-		$query = $this->db->get('gameinfo');
-		
-		
-		return $query;
-		
-		
-	}
-	
-	//this is a test
-	public function get_gameInfotest($id)
-	{
-		$this->db->select('GameName,Price,GameKey');
-		$this->db->where('GameID',$id);
-		$query = $this->db->get('gameinfo');
-		
-		$this->load->helper('date');
-		
-		$row = $query->row();
-		
-		echo $row->GameName;
-		echo $row->Price;
-		
-		echo "<br>";
-		echo time();
-		echo "<br>";
-		echo date("Y-m-d");
-		
-		
-		
-		/*
-		foreach ($query->result() as $row)
-		{
-			echo $row->GameName;
-			echo $row->Price;
-			echo $row->GameKey;
-		}
-		*/
-		
-	
-		
-		//return $query;
-	
-		
-	}
-	
 	public function get_userID($data)
 	{
 		$this->db->select('UserID');
@@ -202,16 +152,14 @@ class Model_users extends CI_Model{
 	}
 	
 	
-	
-	//data is current username
-	/*
-	public function matchOldPassword($data)
+	public function get_transaction($data)
 	{
-		$this->db->select('password');
-		$this->db->where('password'
-		$query = $this->db->get('account');
+		$this->db->select('TransacID,GameName,TransacDate,Price');
+		$this->db->where('UserID',$data);
+		$query = $this->db->get('transaction');	
+		return $query;
 	}
-	*/
+	
 	
 }
 

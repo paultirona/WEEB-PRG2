@@ -178,26 +178,7 @@
 				
 				<a href='<?php echo base_url()."index.php/account/payment_overwatch";?>' class="btn btn-success btn-lg">Purchase</a>
 
-				
-				<!--
-				<a href="<//?php echo base_url().'index.php/account/payment';?>">
-					<button type="submit" class="btn btn-success btn-lg"  title="Purchase">Purchase</button>
-				</a>
-				-->
-				<!--
-				<form class="form-horizontal" method="post" action='<//?php echo base_url();?>index.php/Account/payment_overwatch'>
-					
-					<button type="submit" class="btn btn-success btn-lg"  title="Purchase">Purchase</button>
-					
-					
-					<input type="hidden" name="GameID" value=$GameID/>
-					<//?php echo set_value($GameID); ?>
-					
-					
-					<input type="hidden" name="GameID" value=1>
-					
-				</form>
-				-->
+			
 				
             </div>
 
@@ -252,7 +233,6 @@
 
         <!-- Related Projects Row -->
         <div class="row">
-
             <div class="col-lg-12">
                 <h3 class="page-header">You Might Also Like</h3>
             </div>

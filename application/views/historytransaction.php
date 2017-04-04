@@ -1,4 +1,5 @@
 <?php
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -123,34 +124,33 @@
 			<table class="table">
 				<thead>
 					<tr>
-					  <th>#</th>
+					  <th>Transaction #</th>
 					  <th>Game Name</th>
 					  <th>Date of Purchase</th>
 					  <th>Price</th>
 					</tr>
 				</thead>
 			<tbody>
-				<tr>
-					<th scope="row">1</th>
-					<td>Overwatch</td>
-					<td>September 11,2001</td>
-					<td>60$</td>
-				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Warcraft</td>
-					<td>Feb 10, 2017</td>
-					<td>50$</td>
-				</tr>
-				<tr>
-					<th scope="row">3</th>
-					<td>Starcraft 2</td>
-					<td>Dec 25, 1995</td>
-					<td>40$</td>
-				</tr>
+					
+				
+				
+				<?php
+					foreach($trans->result() as $row)
+					{
+						?><tr>
+						<td><?php echo $row->TransacID;?></td>
+						<td><?php echo $row->GameName;?></td>
+						<td><?php echo $row->TransacDate;?></td>
+						<td><?php echo $row->Price;?></td>
+						<?php echo "<br>"?>
+						</tr>
+				<?php }
+				?>
+
+
 			</tbody>
 
-			</table>
+		</table>
 		
 		
 		
