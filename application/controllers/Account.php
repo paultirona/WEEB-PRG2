@@ -712,6 +712,146 @@ class Account extends CI_Controller{
 	
 	}
 	
+	
+	
+	
+	public function send_email_logged()
+	{
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('name','Full Name','required|trim');
+		$this->form_validation->set_rules('phone','Phone Number','required|trim');
+		$this->form_validation->set_rules('email','Email','required|trim');
+		$this->form_validation->set_rules('message','Message','required|trim');
+		
+		
+		if($this->form_validation->run())
+		{
+			
+			$this->load->library("email");
+			
+			//change later?
+			$this->email->from(set_value("email"),set_value("fullname"));
+			$this->email->to();
+			
+			
+			$this->email->subject('OGS Support Request');
+			
+			
+			
+			$this->email->message();
+			$this->email->send();
+			
+			echo "Email successfully sent!";
+			$this->load->view('contactlogged');
+			
+		}else{		
+			
+			$this->load->view('contactlogged');
+		}
+		
+	}
+	
+	public function send_email()
+	{	
+		/*
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('name','Full Name','required|trim');
+		$this->form_validation->set_rules('phone','Phone Number','required|trim');
+		$this->form_validation->set_rules('email','Email','required|trim');
+		$this->form_validation->set_rules('message','Message','required|trim');
+		
+		
+		*/
+		
+		
+		
+		
+		////////////////////////
+		
+		$config = Array(
+				'protocol' => 'smtp',
+				'smtp_host' => 'ssl://smtp.googlemail.com',
+				'smtp_port' => 465,
+				'smtp_user' => 'OGShelpdeskPH@gmail',
+				'smtp_pass' => 'ogspassword',
+				'mailtype'  => 'html', 
+				'charset'   => 'iso-8859-1'
+			);
+			$this->load->library('email', $config);
+			$this->email->set_newline("\r\n");
+
+			// Set to, from, message, etc.
+
+			$name = $this->input->post('name');	
+			$phone = $this->input->post('phone');
+			$email = $this->input->post('email');
+			$message = $this->input->post('message');
+					
+			$this->email->from($email,$name);
+			$this->email->to('OGShelpdeskPH@gmail.com');
+			$this->email->message($message.'Phone number: '.$phone);
+			$this->email->send();
+			
+			echo $this->email->print_debugger();
+			
+
+			$result = $this->email->send();
+		
+			
+			echo "Test";
+			$this->load->view('test');
+		
+
+		
+		/*
+		
+		if($this->form_validation->run())
+		{
+			
+			$config = Array(
+				'protocol' => 'smtp',
+				'smtp_host' => 'ssl://smtp.googlemail.com',
+				'smtp_port' => 465,
+				'smtp_user' => 'OGShelpdeskPH@gmail',
+				'smtp_pass' => 'ogspassword',
+				'mailtype'  => 'html', 
+				'charset'   => 'iso-8859-1'
+			);
+			$this->load->library('email', $config);
+			$this->email->set_newline("\r\n");
+
+			// Set to, from, message, etc.
+
+			$name = $this->input->post('name');	
+			$phone = $this->input->post('phone');
+			$email = $this->input->post('email');
+			$message = $this->input->post('message');
+					
+			$this->email->from($email,$name);
+			$this->email->to('OGShelpdeskPH@gmail.com');
+			$this->email->message($message.'Phone number: '.$phone);
+			$this->email->send();
+			
+			echo $this->email->print_debugger();
+			
+
+			$result = $this->email->send();
+		
+			
+			echo "Email successfully sent!";
+			$this->load->view('home');
+			
+		}else{		
+			
+			echo "NOTHING HAPPENED";
+			$this->load->view('test');
+		}
+		*/
+		
+	}
+	
 }
 
 ?>
