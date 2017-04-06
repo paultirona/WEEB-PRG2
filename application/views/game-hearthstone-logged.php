@@ -141,13 +141,13 @@
                             <img class="img-responsive" src="<?php echo base_url();?>assets/img/hearthstone750x500.jpg" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/hearthstone750x500.jpg" alt="">
+                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/hearthstone2_750x500.png" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/hearthstone750x500.jpg" alt="">
+                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/hearthstone3_750x500.jpg" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/hearthstone750x500.jpg" alt="">
+                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/hearthstone4_750x500.jpg" alt="">
                         </div>
                     </div>
 
@@ -176,7 +176,7 @@
                 </ul>
 				
 				
-				<a href='<?php echo base_url()."index.php/account/payment_overwatch";?>' class="btn btn-success btn-lg">Purchase</a>
+				<a href='<?php echo base_url()."index.php/account/payment_hearthstone";?>' class="btn btn-success btn-lg">Purchase</a>
 
 			
 				
@@ -211,20 +211,27 @@
 						</p>    					
 					</div>
                     <div class="tab-pane fade" id="service-two">
-                        <h4>Service Two</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                       <h4>Minimum Requirements</h4>
+                        <p>Operating System:	Windows® 7 / Windows® 8 / Windows® 10</p>
+						<p>Processor:	Intel® Pentium® D or AMD® Athlon™ 64 X2</p>
+						<p>Video:	NVIDIA® GeForce® 6800 (256 MB) or ATI™ Radeon™ X1600 Pro (256 MB) or better</p>
+						<p>Memory:	2 GB RAM</p>
+						<p>Storage:	3 GB available HD space</p>
+						<p>Internet:	Broadband Internet connection</p>
+						<p>Input:	Keyboard and mouse, or touchscreen</p>
+						<p>Resolution:	1024 x 768 minimum display resolution</p>
                     </div>
                     <div class="tab-pane fade" id="service-three">
-                        <h4>Service Three</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    </div>
+                        <h4>Ratings</h4>
+                        <p><b>88%</b> Metacritic</p>
+						<p><b>8/10</b> Gamespot</p>
+						<p><b>9/10</b> IGN</p>
+						</div>
                     <div class="tab-pane fade" id="service-four">
-                        <h4>Service Four</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    </div>
+                        <h4>Reviews</h4>
+                        <p>Between its friendly design and its flexible approach to a free-to-play economy, Hearthstone has successfully pulled me into a genre that I didn't care about in the least. But even more incredibly, it's kept me rapt longer than any games I've played in years, and shows no signs of letting up.
+						 - Polygon</p>
+					</div>
                 </div>
 
             </div>
@@ -237,25 +244,25 @@
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/hearthstone500x300.jpg" alt="">
+                <a href='<?php echo base_url()."index.php/account/game_overwatch"?>'>
+                    <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/OW500x300.jpg" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_forhonor"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/HONOR500x300.jpg" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_starcraft"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/LOTV500x300.jpg" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_mordor"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/SHADOW500x300.jpg" alt="">
                 </a>
             </div>

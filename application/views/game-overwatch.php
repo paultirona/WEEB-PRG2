@@ -185,22 +185,28 @@
                         <p>
 						Essentially a hero-based shooter, Overwatch assigns players into two teams of six, with each player selecting one of 24 pre-defined hero characters with unique movement, attributes, and abilities whose roles are divided into four categories: Offense, Defense, Tank, and Support.
 						Players on a team work together to secure and defend control points on a map and/or escort a payload across the map in a limited amount of time. Players gain cosmetic rewards that do not affect gameplay, such as character skins and victory poses, as they continue to play in matches.					
-						</p>         </div>
+						</p>         
+					</div>
                     <div class="tab-pane fade" id="service-two">
-                        <h4>Service Two</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    </div>
+                        <h4>System Requirements</h4>
+                        <p>Operating system: Windows Vista/7/ 8/10 64-bit (latest Service Pack)</p>
+						<p>Processor: Intel Core i3 or AMD Phenom X3 865.</p>
+						<p>Video: Nvidia GeForce GTX 460, ATI Radeon HD 4850, or Intel HD Graphics 4400.</p>
+						<p>Memory: 768 MB VRAM, 4 GB System RAM.</p>
+						<p>Storage: 7200 RPM with 5 GB available HD space.</p>
+					</div>
                     <div class="tab-pane fade" id="service-three">
-                        <h4>Service Three</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    </div>
+                        <h4>Ratings</h4>
+                        <p><b>9.4/10</b> IGN</p>
+						<p><b>91%</b> Metacritic</p>
+						<p><b>9/10</b> Trusted Reviews</p>
+					</div>
                     <div class="tab-pane fade" id="service-four">
-                        <h4>Service Four</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    </div>
+                        <h4>Reviews</h4>
+                        <p>Just as Team Fortress 2 burst onto the scene and captivated so many with its charm, and 
+						accessible gameplay, Overwatch is poised to do the same with its sharp gameplay and likable characters.
+						There’s little doubt that the next great class-based shooter has arrived - Twinfinite</p>
+					</div>
                 </div>
 
             </div>
@@ -214,25 +220,25 @@
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_hearthstone"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/hearthstone500x300.jpg" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_forhonor"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/HONOR500x300.jpg" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_starcraft"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/LOTV500x300.jpg" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_mordor"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/SHADOW500x300.jpg" alt="">
                 </a>
             </div>

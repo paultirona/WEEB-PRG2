@@ -137,17 +137,17 @@
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
-                        <div class="item active">
+                       <div class="item active">
                             <img class="img-responsive" src="<?php echo base_url();?>assets/img/SHADOW750x500.png" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/SHADOW750x500.png" alt="">
+                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/mordor2_750x500.jpg" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/SHADOW750x500.png" alt="">
+                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/mordor3_750x500.jpg" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/SHADOW750x500.png" alt="">
+                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/mordor4_750x500.jpg" alt="">
                         </div>
                     </div>
 
@@ -176,7 +176,7 @@
                 </ul>
 				
 				
-				<a href='<?php echo base_url()."index.php/account/payment_overwatch";?>' class="btn btn-success btn-lg">Purchase</a>
+				<a href='<?php echo base_url()."index.php/account/payment_mordor";?>' class="btn btn-success btn-lg">Purchase</a>
 
 			
 				
@@ -211,20 +211,27 @@
 						</p>				
 					</div>
                     <div class="tab-pane fade" id="service-two">
-                        <h4>Service Two</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    </div>
+                        <h4>System Requirements</h4>
+                        <p>OS: 64-bit: Vista, Win 7, Win 8.</p>
+						<p>Processor: Intel Core i5-750, 2.67 GHz. | AMD Phenom II X4 965, 3.4 GHz.</p>
+						<p>Memory: 3 GB RAM.</p>
+						<p>Graphics: NVIDIA GeForce GTX 460. | AMD Radeon HD 5850.</p>
+						<p>DirectX: Version 11.</p>
+						<p>Network: Broadband Internet connection.</p>
+						<p>Hard Drive: 25 GB available space.</p>
+					</div>
                     <div class="tab-pane fade" id="service-three">
-                        <h4>Service Three</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    </div>
+                        <h4>Ratings</h4>
+                        <p><b>9.3/10</b> IGN</p>
+						<p><b>8/10</b> Trusted Reviews</p>
+						<p><b>84%</b> Metacritic</p>
+					</div>
                     <div class="tab-pane fade" id="service-four">
-                        <h4>Service Four</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    </div>
+                        <h4>Reviews</h4>
+                        <p>Right now, it’s my main contender for game of the year, simply because, in its lack of pretension, its attention to 
+						detail and its understanding that video games first and foremost should be fun, it puts everything else I’ve played 
+						recently in its long shadow. - Guardian</p>
+					</div>
                 </div>
 
             </div>
@@ -237,25 +244,25 @@
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_hearthstone"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/hearthstone500x300.jpg" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_forhonor"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/HONOR500x300.jpg" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_starcraft"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/LOTV500x300.jpg" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_overwatch"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/OW500x300.jpg" alt="">
                 </a>
             </div>

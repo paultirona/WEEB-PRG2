@@ -14,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Legacy of the Void (PC)</title>
+    <title>Starcraft II (PC)</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -87,7 +87,7 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Legacy of the Void
+                <h1 class="page-header">Starcraft II
                     <small>(PC)</small>
                 </h1>
                 <ol class="breadcrumb">
@@ -95,7 +95,7 @@
                     </li>
                     <li><a href='<?php echo base_url()."index.php/account/Shop"?>'>Games</a>
                     </li>
-                    <li class="active">Legacy of the Void (PC)</li>
+                    <li class="active">Starcraft II (PC)</li>
                 </ol>
             </div>
         </div>
@@ -120,13 +120,13 @@
                             <img class="img-responsive" src="<?php echo base_url();?>assets/img/LOTV750x500.jpg" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/LOTV750x500.jpg" alt="">
+                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/starcraft2_750x500.jpg" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/LOTV750x500.jpg" alt="">
+                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/starcraft3_750x500.jpg" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/LOTV750x500.jpg" alt="">
+                            <img class="img-responsive" src="<?php echo base_url();?>assets/img/starcraft4_750x500.jpg" alt="">
                         </div>
                     </div>
 
@@ -146,7 +146,7 @@
                 <p>The single-player campaign features an even number of missions similar to Wings of Liberty and Heart of the Swarm and centers around the Protoss character Artanis, hierarch of the Khalai Protoss and the Nerazim (Dark Templar).</p>
                 <h3>Game Details</h3>
                 <ul>
-                    <li>Title: Legacy of the Void</li>
+                    <li>Title: Starcraft II</li>
                     <li>Genre: Real Time Strategy</li>
                     <li>Developer: Blizzard Entertainment</li>
                     <li>Release Date: November 10, 2015</li>
@@ -187,20 +187,26 @@
 						</p>         
 					</div>
                     <div class="tab-pane fade" id="service-two">
-                        <h4>Service Two</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    </div>
+                        <h4>System Requirements</h4>
+                        <p>Operating: System	Windows XP/Windows Vista/Windows 7/Windows 8 (Updated with the latest Service Packs) with DirectX 9.0c</p>
+						<p>Processor:	Intel Pentium D or AMD Athlon 64 X2</p>
+						<p>Video:	NVIDIA GeForce 7600 GT or ATI Radeon X800 XT or better</p>
+						<p>Memory:	1.5 GB RAM</p>
+						<p>Storage:	20 GB available HD space</p>
+						<p>Internet:	Broadband Internet connection</p>
+						<p>Media:	DVD-ROM drive</p>
+						<p>Resolution:	1024X768 minimum display resolution</p>
+					</div>
                     <div class="tab-pane fade" id="service-three">
-                        <h4>Service Three</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    </div>
+                        <h4>Ratings</h4>
+                        <p><b>93%</b> PC Gamer</p> 
+						<p><b>93%</b> Metacritic</p>
+						<p><b>9.5/10</b> GameSpot</p>
+					</div>
                     <div class="tab-pane fade" id="service-four">
-                        <h4>Service Four</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                    </div>
+                        <h4>Reviews</h4>
+						<p>For anyone else interested in or already on board with RTS games, Starcraft II isn't just an amazing, it's required reading. - Telegraph</p>
+					</div>
                 </div>
 
             </div>
@@ -214,25 +220,25 @@
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_hearthstone"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/hearthstone500x300.jpg" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_forhonor"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/HONOR500x300.jpg" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_overwatch"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/OW500x300.jpg" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
-                <a href="#">
+                <a href='<?php echo base_url()."index.php/account/game_mordor"?>'>
                     <img class="img-responsive img-hover img-related" src="<?php echo base_url();?>assets/img/SHADOW500x300.jpg" alt="">
                 </a>
             </div>
