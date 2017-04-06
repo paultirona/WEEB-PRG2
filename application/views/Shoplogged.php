@@ -106,11 +106,7 @@
 					<span class="list-group-item">Action</span>
 					<span class="list-group-item">Strategy</span>
 					<span class="list-group-item">RPG</span>
-					<!--
-                    <a href="#" class="list-group-item">Action</a>
-                    <a href="#" class="list-group-item">Strategy</a>
-                    <a href="#" class="list-group-item">RPG</a>
-					-->
+
                 </div>
             </div>
 			
@@ -175,8 +171,8 @@
                         <div class="thumbnail">
                             <img src="<?php echo base_url();?>assets/img/HEARTHSTONE320x150.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">Php 50</h4>
-                                <h4><a href='<?php echo base_url()."index.php/account/game_hearthstone"?>'>Hearthstone</a>
+                                <h4 class="pull-right">Php 1500</h4>
+                                <h4><a href='<?php echo base_url()."index.php/account/game_hearthstone_logged"?>'>Hearthstone</a>
                                 </h4>
                                 <p>Hearthstone, originally known as Hearthstone: Heroes of Warcraft, is a free-to-play online collectible card video game developed and published by Blizzard Entertainment.</p>
                             </div>
@@ -197,9 +193,9 @@
                         <div class="thumbnail">
                             <img src="<?php echo base_url();?>assets/img/LOTV320x150.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">Php 800</h4>
+                                <h4 class="pull-right">Php 2000</h4>
                                 <h4>
-								<a href='<?php echo base_url()."index.php/account/game_legacyofthevoid"?>'>Legacy of the Void</a>
+								<a href='<?php echo base_url()."index.php/account/game_starcraft_logged"?>'>Starcraft 2</a>
                                 </h4>
                                 <p>StarCraft II: Legacy of the Void is a standalone expansion pack to the military science fiction real-time strategy game StarCraft II: Wings of Liberty, and the third and final part of the StarCraft II trilogy developed by Blizzard Entertainment.</p>
                             </div>
@@ -220,8 +216,8 @@
                         <div class="thumbnail">
                             <img src="<?php echo base_url();?>assets/img/SHADOW320x150.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">Php 2000</h4>
-                                <h4><a href='<?php echo base_url()."index.php/account/game_shadowofmordor"?>'>Shadow of Mordor</a>
+                                <h4 class="pull-right">Php 2500</h4>
+                                <h4><a href='<?php echo base_url()."index.php/account/game_mordor_logged"?>'>Mordor</a>
                                 </h4>
                                 <p>Middle-earth: Shadow of Mordor is an open world action-role playing video game developed by Monolith Productions and published by Warner Bros. Interactive Entertainment. An original adaptation of the legendarium created by J. R. R. Tolkien, the game is based on Tolkien's fantasy novels The Hobbit and The Lord of the Rings and is heavily inspired by director Peter Jackson's The Lord of the Rings and The Hobbit film adaptations.</p>
                             </div>
@@ -242,8 +238,8 @@
                         <div class="thumbnail">
                             <img src="<?php echo base_url();?>assets/img/HONOR320x150.jpg" alt="">
                             <div class="caption">
-                               <h4 class="pull-right">Php 2900</h4>
-                                <h4><a href='<?php echo base_url()."index.php/account/game_forhonor"?>'>For Honor</a>
+                               <h4 class="pull-right">Php 2300</h4>
+                                <h4><a href='<?php echo base_url()."index.php/account/game_forhonor_logged"?>'>For Honor</a>
                                 </h4>
                                 <p>For Honor is a hack and slash fighting game developed and published by Ubisoft for Microsoft Windows, PlayStation 4, and Xbox One.</p>
                             </div>
@@ -259,14 +255,7 @@
                             </div>
                         </div>
                     </div>
-					<!--
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
-                        </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                        <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
-                    </div>
-					-->
+
                 </div>
 
             </div>
@@ -274,6 +263,9 @@
         </div>
 
     </div>
+	
+	
+	<!--If we have more games add pages -->
 	<!-- Pagination 
 	
         <div class="row text-center">
