@@ -125,13 +125,7 @@
 					<span>paul_tirona@dlsu.edu.ph</span>
 					<span>paolo_soriano@dlsu.edu.ph</span>
 					<span>chris_siochi@dlsu.edu.ph</span>
-					
-					<!--
-					<a href="mailto:name@example.com">paul_tirona@dlsu.edu.ph</a>
-					
-					<a href="mailto:name@example.com">paolo_soriano@dlsu.edu.ph </a>
-					<a href="mailto:name@example.com">chris_siochi@dlsu.edu.ph </a>
-					-->
+
 				</p>
                 <p><i class="fa fa-clock-o"></i> 
                     <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
@@ -161,89 +155,35 @@
             <div class="col-md-8">
                 <h3>Send us a Message</h3>
 				
+			
+                <form method="post" action='<?php echo base_url();?>index.php/Account/send_email' accept-charset="utf-8">
 				
-				<span class="text-danger"><?php echo form_error('name'); ?></span>
-				<span class="text-danger"><?php echo form_error('phone'); ?></span>
-				<span class="text-danger"><?php echo form_error('email'); ?></span>				
-				<span class="text-danger"><?php echo form_error('message'); ?></span>
-						
-				
-                <form name="sentMessage" id="contactForm" novalidate method="post" action='<?php echo base_url();?>index.php/Account/send_email'>
-					
-					
-					
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Full Name:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name." value="<?php echo set_value('name'); ?>">
+                            <input type="text" class="form-control" id="name" name="name" required data-validation-required-message="Please enter your name." value="<?php echo set_value('name'); ?>">
                             <p class="help-block"></p>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Phone Number:</label>
-                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number." value="<?php echo set_value('phone'); ?>">
+                            <input type="tel" class="form-control" id="phone" name="phone" required data-validation-required-message="Please enter your phone number." value="<?php echo set_value('phone'); ?>">
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Email Address:</label>
-                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address." value="<?php echo set_value('email'); ?>">
+                            <input type="email" class="form-control" id="email" name="email" required data-validation-required-message="Please enter your email address." value="<?php echo set_value('email'); ?>">
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Message:</label>
-                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none" value="<?php echo set_value('message'); ?>"></textarea>
+                            <textarea rows="10" cols="100" class="form-control" id="message" name="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none" value="<?php echo set_value('message'); ?>"></textarea>
                         </div>
                     </div>
 					
-					
-					<!-- TEST TEST TEST
-					
-					
-					 <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Full Name:</label>
-                            <input type="text" class="form-control" id="name" value="<?php echo set_value('name'); ?>">
-                            <p class="help-block"></p>
-                        </div>
-                    </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Phone Number:</label>
-                            <input type="tel" class="form-control" id="phone" value="<?php echo set_value('phone'); ?>">
-                        </div>
-                    </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Email Address:</label>
-                            <input type="email" class="form-control" id="email" value="<?php echo set_value('email'); ?>">
-                        </div>
-                    </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Message:</label>
-                            <textarea rows="10" cols="100" class="form-control" id="message"  maxlength="999" style="resize:none" value="<?php echo set_value('message'); ?>"></textarea>
-                        </div>
-                    </div>
-					
-					
-					<span class="text-danger"><?php echo form_error('name'); ?></span>
-				<span class="text-danger"><?php echo form_error('phone'); ?></span>
-				<span class="text-danger"><?php echo form_error('email'); ?></span>				
-				<span class="text-danger"><?php echo form_error('message'); ?></span>
-					
-					-->
-					
-					<!--
-					value="<//?php echo set_value('password'); ?>"
-					
-					
-					<div id="success"></div>
-					-->
-                    <div id="success"></div>
-                    <!-- For success/fail messages -->
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
